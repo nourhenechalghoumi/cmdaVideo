@@ -1,0 +1,123 @@
+/* Logo Animation Styles */
+
+.custom-logo,
+.site-logo,
+.logo-container img {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+.custom-logo:hover,
+.site-logo:hover,
+.logo-container:hover img {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 8px 16px rgba(7, 107, 78, 0.3));
+}
+
+/* Logo pulse animation for homepage hero */
+.hero-logo-img {
+    animation: logoPulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(7, 107, 78, 0.4));
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 10px 30px rgba(7, 107, 78, 0.4));
+    }
+    50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 15px 40px rgba(7, 107, 78, 0.6));
+    }
+}
+
+/* Logo fade in animation on page load */
+.site-branding {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo container styling */
+.logo-container {
+    display: inline-block;
+    position: relative;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(7, 107, 78, 0.2), transparent);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+.logo-container:hover::before {
+    width: 150%;
+    height: 150%;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .custom-logo,
+    .site-logo {
+        max-width: 150px;
+    }
+    
+    .hero-logo-img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-logo,
+    .site-logo {
+        max-width: 120px;
+    }
+    
+    .hero-logo-img {
+        max-width: 150px;
+    }
+}
+
+/* Loading animation for logo */
+.logo-loading {
+    animation: logoRotate 1.5s ease-in-out;
+}
+
+@keyframes logoRotate {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Sticky header logo size adjustment */
+.site-header.scrolled .custom-logo,
+.site-header.scrolled .site-logo,
+.site-header.scrolled .cmda-logo {
+    height: 45px !important;
+    width: auto;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

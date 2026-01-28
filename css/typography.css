@@ -1,0 +1,159 @@
+/* 
+ * CMDA Theme Typography Utility Classes
+ * Provides utility classes for brand-compliant typography usage
+ */
+
+/* Font Weight Utilities - Inter (Primary Alternative) */
+.font-inter-light,
+.font-alta-light {
+    font-family: 'Inter', 'ALTA', 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.font-inter-regular,
+.font-alta-regular {
+    font-family: 'Inter', 'ALTA', 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.font-inter-medium,
+.font-alta-medium {
+    font-family: 'Inter', 'ALTA', 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.font-inter-bold,
+.font-alta-bold {
+    font-family: 'Inter', 'ALTA', 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Font Weight Utilities - Montserrat (Secondary) */
+.font-montserrat-light {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.font-montserrat-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.font-montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.font-montserrat-extrabold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+/* Brand Typography - Primary (Inter/ALTA for headings) */
+.text-primary-font {
+    font-family: 'Inter', 'ALTA', 'Montserrat', sans-serif;
+}
+
+/* Brand Typography - Secondary (Montserrat for body) */
+.text-secondary-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Display Text - Large headings with Inter/ALTA Bold */
+.display-text {
+    font-family: 'Inter', 'ALTA', 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .display-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Body Text - Montserrat Regular */
+.body-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Lead Text - Montserrat for emphasis */
+.lead-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+/* Caption Text - Small secondary text */
+.caption-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+/* Ensure all headings use ALTA with proper weights */
+h1 {
+    font-weight: 700; /* ALTA Bold */
+}
+
+h2 {
+    font-weight: 700; /* ALTA Bold */
+}
+
+h3 {
+    font-weight: 500; /* ALTA Medium */
+}
+
+h4 {
+    font-weight: 500; /* ALTA Medium */
+}
+
+h5 {
+    font-weight: 400; /* ALTA Regular */
+}
+
+h6 {
+    font-weight: 400; /* ALTA Regular */
+}
+
+/* Paragraph variations */
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+p.emphasized {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+p.light {
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+/* Button and CTA text */
+.btn,
+button,
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Navigation and menu items */
+nav,
+.menu,
+.navigation {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
